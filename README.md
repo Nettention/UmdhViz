@@ -1,7 +1,7 @@
 # UmdhViz
 UMDH Diff Visualizer
 
-UMDH(User-mode Dump Heap)[https://support.microsoft.com/ko-kr/kb/268343/en-us] is a nice tool for capturing and 
+[UMDH(User-mode Dump Heap)](https://support.microsoft.com/ko-kr/kb/268343/en-us) is a nice tool for capturing and 
 analyzing memory status of Windows process. Example usage is:
 
 1. Run `MyApp.exe`.
