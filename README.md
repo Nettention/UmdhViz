@@ -11,12 +11,13 @@ analyzing memory status of Windows process. Example usage is:
 4. Run `umdh -pn:MyApp.exe -f:B.txt` again for storing another memory status into a text file B after `MyApp.exe` takes more memory.
 5. Run `umdh -d A.txt B.txt > Diff.txt` for creating a diff file between A and B.
 
-After opening the diff file, you might be frustrated because it cannot tell you where hotspot of memory allocation lies concisely. 
-*UmdhViz* here will tell instead.
+After opening the diff file, you might be frustrated because it cannot tell you where hotspot of memory allocation lies concisely, because UMDH diff text does not accumulate same call stacks. UMDH Visualizer does it, so you can find the hot spot easily.
 
 How to use
 ==========
-Build and run this source files. Visual Studio is needed.
+Build the source files. Visual Studio is needed.
+
+Run UmdhViz.exe.
 
 Click File => Open and select your UMDH Diff file.
 
