@@ -1,5 +1,6 @@
 # UMDH Visualizer
 UMDH Visualizer helps you read the UMDH compare output more easily.
+(NOTE: UMDH is a memory profiler tool provided by Microsoft.)
 
 [UMDH(User-mode Dump Heap)](http://code.logos.com/blog/2009/04/how_to_use_umdh_to_find_native_memory_leaks.html) is a nice tool for capturing and 
 analyzing memory status of Windows process. Example usage is:
@@ -23,3 +24,7 @@ Select the hot spot allocation at left pane and enjoy seeing its call stack at r
 Etc.
 =======
 Don't forget to click [*Do you know ProudNet?*](http://www.nettention.com) if you are interested to developing a game where a cutting edge networking and server technology is needed. :)
+
+License 
+========
+Lesser GPL
