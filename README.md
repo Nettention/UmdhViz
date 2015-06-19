@@ -22,4 +22,4 @@ Select the hot spot allocation at left pane and enjoy seeing its call stack at r
 
 Etc.
 =======
-Don't forget to click [*Do you know ProudNet?*](http://www.nettention.com) if you are interested to developing a game where a cutting edge networking technology is needed. :)
+Don't forget to click [*Do you know ProudNet?*](http://www.nettention.com) if you are interested to developing a game where a cutting edge networking and server technology is needed. :)
