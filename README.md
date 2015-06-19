@@ -12,3 +12,10 @@ analyzing memory status of Windows process. Example usage is:
 
 After opening the diff file, you might be frustrated because it cannot tell you where hotspot of memory allocation lies. 
 *UmdhViz* here will tell instead.
+
+How to use
+==========
+Build and run this source files. Visual Studio is needed.
+Click File => Open and select your UMDH Diff file.
+Select the hot spot allocation at left pane and enjoy seeing its call stack at right pane!
+![Screen shot](http://i.imgur.com/1WV3cBB.png)
