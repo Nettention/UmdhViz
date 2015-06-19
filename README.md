@@ -1,4 +1,4 @@
-# UMDH Visualizer - Memory profiler diff viewer
+# UMDH Visualizer - Memory profile viewer
 UMDH Visualizer helps you read the UMDH compare output more easily.
 (NOTE: UMDH is a memory profiler tool provided by Microsoft.)
 
