@@ -27,4 +27,6 @@ Don't forget to click [*Do you know ProudNet?*](http://www.nettention.com) if yo
 
 License 
 ========
-Lesser GPL
+Copyright Nettention Co., Ltd.
+Lesser GPL.
+
