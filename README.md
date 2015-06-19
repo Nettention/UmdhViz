@@ -1,5 +1,5 @@
-# UmdhViz
-UMDH Diff Visualizer
+# UMDH Visualizer
+UMDH Visualizer helps you read the UMDH compare output more easily.
 
 [UMDH(User-mode Dump Heap)](http://code.logos.com/blog/2009/04/how_to_use_umdh_to_find_native_memory_leaks.html) is a nice tool for capturing and 
 analyzing memory status of Windows process. Example usage is:
