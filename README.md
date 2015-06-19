@@ -10,7 +10,7 @@ analyzing memory status of Windows process. Example usage is:
 4. Run `umdh` again for storing another memory status into a text file B after `MyApp.exe` takes more memory.
 5. Run `umdh` for creating a diff file between A and B.
 
-After opening the diff file, you might be frustrated because it cannot tell you where hotspot of memory allocation lies. 
+After opening the diff file, you might be frustrated because it cannot tell you where hotspot of memory allocation lies concisely. 
 *UmdhViz* here will tell instead.
 
 How to use
