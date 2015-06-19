@@ -17,16 +17,19 @@ After opening the diff file, you might be frustrated because it cannot tell you 
 How to use
 ==========
 Build and run this source files. Visual Studio is needed.
+
 Click File => Open and select your UMDH Diff file.
+
 Select the hot spot allocation at left pane and enjoy seeing its call stack at right pane!
 ![Screen shot](http://i.imgur.com/1WV3cBB.png)
 
 Etc.
 =======
-Don't forget to click [*Do you know ProudNet?*](http://www.nettention.com) if you are interested to developing a game where a cutting edge networking and server technology is needed. :)
+Don't forget to click "[*Do you know ProudNet?*](http://www.nettention.com)" if you are interested to developing a game where a cutting edge networking and server technology is needed. :)
 
 License 
 ========
 Copyright Nettention Co., Ltd.
+
 Lesser GPL.
 
