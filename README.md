@@ -15,9 +15,7 @@ After opening the diff file, you might be frustrated because it cannot tell you 
 
 How to use
 ==========
-Build the source files. Visual Studio is needed.
-
-Run UmdhViz.exe.
+[Download](https://github.com/Nettention/UmdhViz/releases) and Run UmdhViz.exe. Latest version of .Net Framwork is needed if you are using old version of Windows.
 
 Click File => Open and select your UMDH Diff file.
 
