@@ -5,6 +5,7 @@ UMDH Visualizer helps you read the UMDH compare output more easily.
 [UMDH(User-mode Dump Heap)](http://code.logos.com/blog/2009/04/how_to_use_umdh_to_find_native_memory_leaks.html) is a nice tool for capturing and 
 analyzing memory status of Windows process. Example usage is:
 
+1. Download and install UMDH. You can get it by installing [Debugging Tools for Windows or Windows SDK](https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 1. Run `MyApp.exe`.
 2. Run `gflags -i MyApp.exe +ust` for start memory allocation tracing.
 3. Run `umdh -pn:MyApp.exe -f:A.txt` for storing memory status into a text file A.
