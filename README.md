@@ -16,7 +16,7 @@ After opening the diff file, you might be frustrated because it cannot tell you 
 
 How to use
 ==========
-[Download](https://github.com/Nettention/UmdhViz/releases) and Run UmdhViz.exe. Latest version of .Net Framwork is needed if you are using old version of Windows.
+[Download](https://github.com/Nettention/UmdhViz/releases) and Run UmdhViz.exe. Latest version of .Net Framework may be needed if you are using old version of Windows.
 
 Click File => Open and select your UMDH Diff file.
 
