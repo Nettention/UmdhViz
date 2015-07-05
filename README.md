@@ -1,6 +1,7 @@
 # UMDH Visualizer - Memory profile viewer
-UMDH Visualizer helps you read the UMDH compare output more easily.
+UMDH Visualizer helps you read the user memory heap dump reports more easily.
 (NOTE: UMDH is a memory profiler tool provided by Microsoft.)
+![Screen shot](http://i.imgur.com/1WV3cBB.png)
 
 [UMDH(User-mode Dump Heap)](http://code.logos.com/blog/2009/04/how_to_use_umdh_to_find_native_memory_leaks.html) is a nice tool for capturing and 
 analyzing memory status of Windows process. Example usage is:
