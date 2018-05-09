@@ -15,7 +15,7 @@ set _NT_SYMBOL_PATH=C:\Users\imays\works\MyApp\Release;srv*c:\symbols*https://ms
 ```
 5. Run `umdh -pn:MyApp.exe -f:A.txt` for storing memory status into a text file A.
 6. Run `umdh -pn:MyApp.exe -f:B.txt` again for storing another memory status into a text file B after `MyApp.exe` takes more memory.
-7. Run `umdh -d A.txt B.txt > Diff.txt` for creating a diff file between A and B.
+7. Run `umdh -d A.txt B.txt > Diff.txt` for creating a diff file between A and B. It is successful if nothing is printed when this execution is finished.
 
 After opening the diff file, you might be frustrated because it cannot tell you where hotspot of memory allocation lies concisely, because UMDH diff text does not accumulate same call stacks. UMDH Visualizer does it, so you can find the hot spot easily.
 
