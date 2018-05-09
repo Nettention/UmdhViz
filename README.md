@@ -7,11 +7,15 @@ UMDH Visualizer helps you read the user memory heap dump reports more easily.
 analyzing memory status of Windows process. Example usage is:
 
 1. Download and install UMDH. You can get it by installing [Debugging Tools for Windows or Windows SDK](https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
-1. Run `MyApp.exe`.
-2. Run `gflags -i MyApp.exe +ust` for start memory allocation tracing.
-3. Run `umdh -pn:MyApp.exe -f:A.txt` for storing memory status into a text file A.
-4. Run `umdh -pn:MyApp.exe -f:B.txt` again for storing another memory status into a text file B after `MyApp.exe` takes more memory.
-5. Run `umdh -d A.txt B.txt > Diff.txt` for creating a diff file between A and B.
+2. Run `MyApp.exe`.
+3. Run `gflags -i MyApp.exe +ust` for start memory allocation tracing.
+4. Set symbol path variable. UMDH needs it. For example,
+```
+set _NT_SYMBOL_PATH=C:\Users\imays\works\MyApp\Release;srv*c:\symbols*https://msdl.microsoft.com/download/symbols
+```
+5. Run `umdh -pn:MyApp.exe -f:A.txt` for storing memory status into a text file A.
+6. Run `umdh -pn:MyApp.exe -f:B.txt` again for storing another memory status into a text file B after `MyApp.exe` takes more memory.
+7. Run `umdh -d A.txt B.txt > Diff.txt` for creating a diff file between A and B.
 
 After opening the diff file, you might be frustrated because it cannot tell you where hotspot of memory allocation lies concisely, because UMDH diff text does not accumulate same call stacks. UMDH Visualizer does it, so you can find the hot spot easily.
 
