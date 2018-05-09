@@ -9,7 +9,7 @@ analyzing memory status of Windows process. Example usage is:
 1. Download and install UMDH. You can get it by installing [Debugging Tools for Windows or Windows SDK](https://msdn.microsoft.com/en-us/library/windows/hardware/ff551063%28v=vs.85%29.aspx?f=255&MSPPError=-2147217396).
 2. Run `MyApp.exe`.
 3. Run `gflags -i MyApp.exe +ust` for start memory allocation tracing.
-4. Set symbol path variable. UMDH needs it. Specify both Windows symbol download location, symbol cache and the symbol path of your program. For example,
+4. Set symbol path variable. UMDH needs it. Specify both Windows symbol download location, symbol cache and the symbol path of your program where pdb files reside. For example,
 ```
 set _NT_SYMBOL_PATH=C:\Users\imays\works\MyApp\Release;srv*c:\symbols*https://msdl.microsoft.com/download/symbols
 ```
