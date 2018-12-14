@@ -12,7 +12,7 @@ namespace UmdhViz
     class DiffBlockParser
     {
         List<String> m_lines;
-
+        public bool m_detectedHex = false;
         string[] Tokenize(string line)
         {
             var r1 = line.Split(' ');
@@ -31,6 +31,19 @@ namespace UmdhViz
         public DiffBlockParser(List<string> lines)
         {
             m_lines = lines;
+        }
+
+        // 16진수 문자를 가지는가?
+        bool ContainsHexChar(string str)
+        {
+            foreach (char x in str)
+            {
+                if (!(x >= '0' && x <= '9'))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         // 이 구문을 분석한다. BYTES_DELTA 부분을 추린다.
@@ -57,7 +70,10 @@ namespace UmdhViz
                 if (words[2] != "(") 
                     return false;
 
-                long positiveNumber = Int64.Parse(words[1]);
+                if (ContainsHexChar(words[1]))
+                    m_detectedHex = true;
+
+                long positiveNumber = Int64.Parse(words[1], m_detectedHex?System.Globalization.NumberStyles.HexNumber: System.Globalization.NumberStyles.Integer);
                 if (!positive)
                 {
                     number = -positiveNumber;

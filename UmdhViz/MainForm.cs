@@ -16,17 +16,20 @@ namespace UmdhViz
 {
     public partial class MainForm : Form
     {
+        string m_defaultWindowText;
         public MainForm()
         {
             InitializeComponent();
+            m_defaultWindowText = Text;
         }
 
         private void OpenUmdhFile_OnSelect(object sender, EventArgs e)
         {
             DialogResult r = m_openFileDialog.ShowDialog();
-            if(r==DialogResult.OK)
+            if (r == DialogResult.OK)
             {
                 OpenUmdhFile(m_openFileDialog.FileName);
+                Text = m_defaultWindowText + " - " + m_openFileDialog.FileName;
             }
         }
 
@@ -38,11 +41,12 @@ namespace UmdhViz
 
         private void OpenUmdhFile(string fileName)
         {
-            using(StreamReader stream = File.OpenText(fileName))
+            using (StreamReader stream = File.OpenText(fileName))
             {
+                bool hexMode = false;
+
                 lines.Clear();
-                m_callStackToAmountInfoMap.Clear();
-                m_allocBlockListView.Items.Clear();
+               
 
                 // 텍스트를 읽는다.
                 while (!stream.EndOfStream)
@@ -51,14 +55,26 @@ namespace UmdhViz
                     lines.Add(line);
                 }
 
+        again:
+
+                m_callStackToAmountInfoMap.Clear();
+                m_allocBlockListView.Items.Clear();
+
                 // 읽은 텍스트에서 Diff 블럭들을 추려내어 맵에 저장한다.
-                int lineNum =0;
-                while(lineNum < lines.Count-1)
+                int lineNum = 0;
+                while (lineNum < lines.Count - 1)
                 {
                     DiffBlockParser parser = new DiffBlockParser(lines);
                     // 블럭의 시작을 찾으면
                     if (parser.IsFirstLine(lineNum))
                     {
+                        if(parser.m_detectedHex && !hexMode)
+                        {
+                            // diff 파일의 숫자들이 16진수다. 처음부터 다시 파싱하자.
+                            hexMode = true;
+                            goto again;
+                        }
+
                         // 끝을 찾는다.
                         int startLine = lineNum;
                         int endLine = -1;
@@ -101,7 +117,7 @@ namespace UmdhViz
                     }
                 }
 
-                
+
                 // 통계로 수집한 것을 총 데이터 큰 순으로 정렬한다.
                 List<KeyValuePair<CallStack, AmountInfo>> result = m_callStackToAmountInfoMap.OrderBy(o => o.Value.m_totalBytes).ToList();
                 result.Reverse();
